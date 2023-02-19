@@ -1,0 +1,101 @@
+.construction{
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    @include center();
+    .perform{
+        width: 60%;
+        height: auto;
+        font-family: sans-serif;
+        @include between();
+        .box1{
+            width: 50%;
+            height: auto;
+            h5{
+                width: 90px;
+                height: 20px;
+                padding-bottom: 10px;
+                color: $myred;
+            }
+            .line{
+                position: relative;
+                top: 0;
+                width: 80px;
+                height: auto;
+                // background-color: $myred;
+                // padding: 10px;
+                
+                &::after{
+                    position: absolute;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    width: 0px;
+                    height: 5px;
+                    background-color: $myred;
+                    transition: 1s;
+                    
+                }
+                &:hover::after{
+                    width: 90px;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: $myred;
+                font-weight: 700;
+                padding: 10px 40px;
+                transition-duration: 4s;
+                // border: 1px dashed $myred;
+               
+
+                &:hover{
+                   
+                    color: $myred;
+                    background-color: palevioletred;
+                    border: 1px solid $myred;
+                }
+            }
+        }
+        
+        .box2{
+
+            width: 50%;
+            height: auto;
+            @include between();
+            flex-wrap: wrap;
+            padding: 10px;
+            .car{
+                width: 45%;
+                height: auto;
+                padding-top: 10px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            
+        }
+      
+            
+    }
+}
+
+@media (max-width:768px){
+    .construction{
+        width: 100%;
+        .perform{
+            width: 100%;
+            flex-direction: column;
+            .box1{
+                width: 90%;
+            }
+            .box2{
+                width: 90%;
+                .car{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

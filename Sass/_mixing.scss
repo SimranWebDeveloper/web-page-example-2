@@ -1,0 +1,84 @@
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin center_flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin center_r{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin center_c{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin between_r{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@mixin between_c{
+    display: flex;
+    align-items: center;
+
+}
+@mixin evenly{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@mixin around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@mixin underline{
+    position: relative;
+    top: 0;
+    height: auto;
+    
+    &::after{
+        position: absolute;
+        bottom: 0;
+        content: "";
+        display: block;
+        width: 0px;
+        height: 5px;
+        background-color: $myred;
+        transition: 1s;
+        
+    }
+    &:hover::after{
+        width: 90px;
+    }
+}
+
+@mixin aTag{
+    text-decoration: none;
+                color: $myred;
+                font-weight: 700;
+                padding: 10px 40px;
+                transition-duration: 2s;
+                // border: 1px dashed $myred;
+               
+
+                &:hover{
+                   
+                    color: $myred;
+                    background-color: palevioletred;
+                    border: 1px solid $myred;
+                }
+}

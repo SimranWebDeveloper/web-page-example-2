@@ -1,0 +1,98 @@
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: $myblack;
+    padding-top: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    @include center();
+    flex-direction: column;
+
+    .box-con{
+        width: 80%;
+        height: auto;
+        @include between_r();
+
+        .box{
+            // background-color: silver;
+            width: 24%;
+            height: auto;
+            img{
+                width: 100%;
+            }
+            a{
+                text-decoration: none;
+                background-color: white;
+                color: $myred;
+                padding: 5px 20px;
+                transition-duration: 1s;
+                &:hover{
+                    color: white;
+                    background-color: $myblack;
+                    border: 1px solid white;
+                }
+            }
+            .inpt{
+                @include between();
+                .inpt1{
+                    width: 65%;
+                    height: auto;
+                    padding: 5px;
+                    border: none;
+                }
+                .inpt2{
+                    width: 35%;
+                    height: auto;
+                    padding: 5px 10px;
+                    background-color: $myred;
+                    color: white;
+                    border: none;
+                }
+            }
+
+        }
+
+    }
+    .hr{
+        width: 100%;
+    }
+    .card{
+        width: 80%;
+        @include between();
+        padding: 20px;
+        a{
+            height: 20px;
+            text-decoration: none;
+            color: $myred;
+            background-color: white;
+            padding: 5px;
+            border-radius: 20px;
+            transition: 1s;
+            &:hover{
+                background-color: $myred;
+                color: white;
+            }
+        }
+    }
+}
+
+@media (max-width:768px){
+    .footer{
+        width: 100%;
+        // background-color: silver;
+        .box-con{
+            // width: 100%;
+            @include center();
+            flex-direction: column;
+            .box{
+                width: 90%;
+            }
+        }
+        .card{
+            @include center();
+            flex-direction: column;
+            line-height: 40px;
+        }
+    }
+    
+}

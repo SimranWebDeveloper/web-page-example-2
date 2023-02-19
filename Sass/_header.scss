@@ -1,0 +1,233 @@
+
+.wrapping{
+    
+    z-index: 2;
+    background-color:white;
+    width: 100%;
+    height: auto;
+    @include center();
+    
+
+    .con{
+        
+        background-color: burlywood;
+        width: 80%;
+        height: auto;
+        
+
+        .card1{
+            
+            background-color: white;
+            padding: 20px;
+
+            width: 100%;
+            height: auto;
+            @include around();
+            img:first-child{
+                width: 129px;
+                height: 34px;
+            }
+            .box{
+                width: 17%;
+                height: auto;
+                line-height: 4px;
+                @include between();
+                img{
+                    width: 39px;
+                    height: 39px;
+                }
+                article{
+                    p{
+                        width: 100%;
+                    }
+                }
+            }
+            i{
+                // display: none;
+                position: relative;
+                width: 10px;
+                height: 10px;
+                
+                ul{
+                    height: auto;
+                    z-index: 3;
+                    // width: 100%;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    
+                    @include between_r();
+                    
+                    color: black;
+                    list-style: none;
+                    li{
+                        display: none;
+                        margin-right: 20px;
+                        a{
+                            // display: none;
+                            // position: relative;
+                            text-decoration: none;
+                            padding: 10px 20px;
+                            color: black;
+                            .ul{
+                                
+                                // position: absolute;
+                                // top: 40px;
+                                // right: 0px;
+                                
+                                position: relative;
+                                display: flex;
+                                flex-direction: column;
+                                li{
+                                    display: none;
+                                    a{
+                                        background-color: rebeccapurple;
+                                        width: 100%;
+                                        height: auto;
+                                        position: absolute;
+                                        top: 40px;
+                                        left: 20px;
+                                        padding: 10 20;
+                                    }
+                                }
+                            }
+                            &:hover{
+                                .ul{
+                                    li{
+                                        width: 200px;
+                                        height: auto;
+                                        background-color: white;
+                                        line-height: 20px;
+                                        display: block;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+                &:hover{
+                    ul{
+                        // width: 100%;
+                        // height: auto;
+                        li{
+                            width: 100%;
+                            height: auto;
+                           background-color: white;
+                            display: block;
+                        }
+                    }
+                }
+
+            }
+            .hr{
+                width: 100%;
+                height: 2px;
+                display: none;
+                background-color: black;
+            }
+
+
+        }
+        
+        .card2{
+            
+            z-index: 2;
+            position: fixed;
+            top: 95px;
+            
+            background-color: $myred;
+            width: 80%;
+            height: auto;
+
+            @include between();
+
+            ul{
+                width: 50%;
+                height: auto;
+                @include between();
+                li{
+                    list-style: none;
+                    a{
+                        position: relative;
+                        text-decoration: none;
+                        color: white;
+                        ul{
+                            width: 150px;
+                            height: auto;
+                            position: absolute;
+                            top: 45px;
+                            line-height: 30px;
+                            display: none;
+                        }
+                        &:hover{
+                            ul{
+                                color :rgb(160, 152, 152);
+                                display: block;
+                                background-color: white;
+                            }
+                            line-height: 10px;
+                            padding: 13px;
+                            border: 1px solid burlywood;
+                        }
+                    }
+
+                }
+
+            }
+            .btn{
+                text-decoration: none;
+                color: $myred;
+                background-color:  white;
+                padding: 5px 20px;
+                margin-right: 10px;
+                &:hover{
+                    background-color: $myred;
+                    color:  white;
+                    border: 1px solid white; 
+                }
+            }
+        }
+       
+    }
+}
+
+@media (max-width:768px){
+    .wrapping{
+        width: 100%;
+        height: 100px;
+
+        .con{
+            width: 100%;
+            // background-color: burlywood;
+            header{
+                width: 100%;
+                // background-color: white;
+                .card1{
+                    z-index: 3;
+                    width: 95%;
+                    position: fixed;
+                    top: 0;
+                    // background-color: salmon;
+                    display: flex;
+                    justify-content: space-between;
+                    .box{
+                        
+                        display: none;
+                    }
+                    i{
+                        
+                        display: block;
+                    }
+
+                }
+                .card2{
+                    display: none;
+                }
+            }
+
+        }
+    }
+
+}
